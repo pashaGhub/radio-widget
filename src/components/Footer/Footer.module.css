@@ -1,0 +1,21 @@
+.container {
+  width: -webkit-fill-available;
+  padding: 1.5rem;
+  background: #22222b;
+  position: sticky;
+  bottom: 0;
+  border-top: solid 2px #4d505c;
+}
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  color: #eeaf61;
+  font-weight: 600;
+}
+
+.currentStation {
+  text-align: center;
+  color: #9da6b9;
+  font-size: 1.8rem;
+}

@@ -1,0 +1,61 @@
+.container {
+  border-bottom: solid 2px #43434d;
+  margin-bottom: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.stationController {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container button {
+  border: none;
+}
+
+.stationController button {
+  width: 2rem;
+  height: 2rem;
+  margin: auto 0;
+}
+
+.stationController button:active {
+  border: solid 3px #333;
+  border-radius: 50%;
+}
+
+.minus {
+  background: url(../../../images/minus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.plus {
+  background: url(../../../images/plus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.stationController img {
+  width: 10rem;
+  height: 10rem;
+  border: solid 3px #9da6b9;
+  border-radius: 50%;
+}
+
+.stationInfo {
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  color: #9da6b9;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.stationWave {
+  font-weight: 600;
+}

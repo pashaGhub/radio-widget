@@ -1,0 +1,43 @@
+.container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #eeaf61;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.container button {
+  border: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+.container button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.container button:active {
+  opacity: 0.6;
+}
+
+.arrow {
+  background: url(../../images/back-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.switch {
+  background: url(../../images/switch.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
