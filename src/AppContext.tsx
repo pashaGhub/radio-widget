@@ -31,7 +31,7 @@ export function ContextProvider(props: any): JSX.Element {
     null
   );
   const [loader, setLoader] = useState<boolean>(false);
-  const [error, setError] = useState<String>("");
+  const [error, setError] = useState<string | boolean>(false);
 
   //simulating data fetch
   async function getData() {
@@ -44,13 +44,18 @@ export function ContextProvider(props: any): JSX.Element {
     setLoader(false);
   }
 
+  const hanndleCurrentStation = (id: number) => {
+    const newStation = stations.find((station: IStation) => station.id === id);
+    setCurrentStation({ id: newStation!.id, title: newStation!.title });
+  };
+
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <AppContext.Provider
-      value={{ stations, currentStation, setCurrentStation, loader, error }}
+      value={{ stations, currentStation, hanndleCurrentStation, loader, error }}
     >
       {props.children}
     </AppContext.Provider>

@@ -3,7 +3,7 @@ import { AppContext, IStation } from "../../../AppContext";
 import s from "./Station.module.css";
 
 export const Station: React.FC<{ data: IStation }> = ({ data }) => {
-  const { currentStation, setCurrentStation } = useContext(AppContext);
+  const { currentStation, hanndleCurrentStation } = useContext(AppContext);
 
   //checking if station is open and adding "open" style
   const styles = [s.container];
@@ -14,7 +14,7 @@ export const Station: React.FC<{ data: IStation }> = ({ data }) => {
   //changing dot by comma in the wave number
   const waveNum = data.waves
     .toString()
-    .replace(/[,.]/g, m => (m === "," ? "." : ","));
+    .replace(/[,.]/g, m => (m === "." ? "," : ","));
 
   return (
     <div className={styles.join(" ")}>
@@ -23,7 +23,10 @@ export const Station: React.FC<{ data: IStation }> = ({ data }) => {
         <img src={data.img} alt="" />
         <button className={s.plus}></button>
       </div>
-      <button className={s.stationInfo}>
+      <button
+        className={s.stationInfo}
+        onClick={() => hanndleCurrentStation(data.id)}
+      >
         <span>{data.title}</span>
         <span className={s.stationWave}>{waveNum}</span>
       </button>

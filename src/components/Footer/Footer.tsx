@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
       {currentStation != null && (
         <>
           <div className={s.label}>Currently playing</div>
-          <div className={s.currentStation}>Dribbble FM</div>
+          <div className={s.currentStation}>{currentStation.title}</div>
         </>
       )}
     </div>

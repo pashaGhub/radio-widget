@@ -2,3 +2,11 @@
   padding: 1.5rem;
   min-height: 100%;
 }
+
+.loader,
+.error {
+  margin: 5rem auto;
+  text-align: center;
+  color: #9da6b9;
+  font-size: 1.8rem;
+}
