@@ -1,6 +1,7 @@
 .container {
   width: -webkit-fill-available;
-  padding: 1.5rem;
+  min-height: 109px;
+  /* padding: 1.5rem; */
   background: #22222b;
   position: sticky;
   bottom: 0;
@@ -12,10 +13,12 @@
   text-transform: uppercase;
   color: #eeaf61;
   font-weight: 600;
+  padding: 1.5rem 1.5rem 0;
 }
 
 .currentStation {
   text-align: center;
   color: #9da6b9;
   font-size: 1.8rem;
+  padding: 0 1.5rem 1.5rem;
 }
